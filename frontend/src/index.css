@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Original Stitch Palette (Light) */
+    --color-on-surface: 25 28 30;
+    --color-secondary-container: 108 248 187;
+    --color-on-background: 25 28 30;
+    --color-inverse-on-surface: 240 241 243;
+    --color-primary-fixed-dim: 195 192 255;
+    --color-surface-bright: 248 249 251;
+    --color-primary-container: 79 70 229;
+    --color-on-error: 255 255 255;
+    --color-on-error-container: 147 0 10;
+    --color-tertiary-fixed-dim: 255 179 173;
+    --color-on-tertiary: 255 255 255;
+    --color-on-secondary: 255 255 255;
+    --color-error-container: 255 218 214;
+    --color-on-primary-fixed-variant: 51 35 204;
+    --color-on-secondary-fixed: 0 33 19;
+    --color-tertiary: 150 0 20;
+    --color-primary-fixed: 226 223 255;
+    --color-tertiary-fixed: 255 218 215;
+    --color-primary: 53 37 205;
+    --color-background: 248 249 251;
+    --color-on-primary-container: 218 215 255;
+    --color-surface-container-lowest: 255 255 255;
+    --color-outline: 119 117 135;
+    --color-surface-container-low: 243 244 246;
+    --color-on-tertiary-fixed-variant: 147 0 19;
+    --color-inverse-primary: 195 192 255;
+    --color-inverse-surface: 46 49 50;
+    --color-on-tertiary-container: 255 208 204;
+    --color-surface-variant: 225 226 228;
+    --color-on-surface-variant: 70 69 85;
+    --color-surface-dim: 217 218 220;
+    --color-error: 186 26 26;
+    --color-on-secondary-container: 0 113 77;
+    --color-secondary: 0 108 73;
+    --color-on-primary-fixed: 15 0 105;
+    --color-outline-variant: 199 196 216;
+    --color-surface-container: 237 238 240;
+    --color-secondary-fixed: 111 251 190;
+    --color-on-primary: 255 255 255;
+    --color-secondary-fixed-dim: 78 222 163;
+    --color-surface: 248 249 251;
+    --color-tertiary-container: 188 29 37;
+    --color-surface-container-high: 231 232 234;
+    --color-on-tertiary-fixed: 65 0 4;
+    --color-on-secondary-fixed-variant: 0 82 54;
+    --color-surface-tint: 77 68 227;
+    --color-surface-container-highest: 225 226 228;
+  }
+
+  .dark {
+    /* True Dark Aesthetic (Modern Slate/Indigo) */
+    --color-on-surface: 248 250 252;
+    --color-secondary-container: 45 212 191;
+    --color-on-background: 248 250 252;
+    --color-inverse-on-surface: 15 23 42;
+    --color-primary-fixed-dim: 99 102 241;
+    --color-surface-bright: 30 41 59;
+    --color-primary-container: 67 56 202;
+    --color-on-error: 255 255 255;
+    --color-on-error-container: 254 226 226;
+    --color-tertiary-fixed-dim: 244 63 94;
+    --color-on-tertiary: 255 255 255;
+    --color-on-secondary: 255 255 255;
+    --color-error-container: 153 27 27;
+    --color-on-primary-fixed-variant: 199 210 254;
+    --color-on-secondary-fixed: 204 253 241;
+    --color-tertiary: 225 29 72;
+    --color-primary-fixed: 199 210 254;
+    --color-tertiary-fixed: 255 228 230;
+    --color-primary: 129 140 248;
+    --color-background: 15 23 42;
+    --color-on-primary-container: 224 231 255;
+    --color-surface-container-lowest: 15 23 42;
+    --color-outline: 71 85 105;
+    --color-surface-container-low: 30 41 59;
+    --color-on-tertiary-fixed-variant: 255 204 213;
+    --color-inverse-primary: 129 140 248;
+    --color-inverse-surface: 241 245 249;
+    --color-on-tertiary-container: 255 241 242;
+    --color-surface-variant: 51 65 85;
+    --color-on-surface-variant: 148 163 184;
+    --color-surface-dim: 15 23 42;
+    --color-error: 239 68 68;
+    --color-on-secondary-container: 20 184 166;
+    --color-secondary: 16 185 129;
+    --color-on-primary-fixed: 238 242 255;
+    --color-outline-variant: 51 65 85;
+    --color-surface-container: 30 41 59;
+    --color-secondary-fixed: 17 94 89;
+    --color-on-primary: 255 255 255;
+    --color-secondary-fixed-dim: 20 184 166;
+    --color-surface: 15 23 42;
+    --color-tertiary-container: 159 18 57;
+    --color-surface-container-high: 51 65 85;
+    --color-on-tertiary-fixed: 255 241 242;
+    --color-on-secondary-fixed-variant: 204 253 241;
+    --color-surface-tint: 99 102 241;
+    --color-surface-container-highest: 71 85 105;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-on-surface));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .editorial-shadow {
+    box-shadow: 0px 12px 32px rgba(15, 23, 42, 0.2);
+  }
+
+  .dark .editorial-shadow {
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-panel {
+    background: rgba(var(--color-surface-container) / 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--color-outline-variant)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-outline-variant));
+    border-radius: 999px;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    animation: pageEnter 0.2s ease-out;
+  }
+
+  @keyframes pageEnter {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Skeleton shimmer */
+  .skeleton {
+    background: linear-gradient(90deg, rgb(var(--color-surface-container-high)) 25%, rgb(var(--color-surface-container)) 50%, rgb(var(--color-surface-container-high)) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
