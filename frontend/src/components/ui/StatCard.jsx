@@ -25,7 +25,7 @@ export default function StatCard({ label, value, badge, badgeVariant = 'neutral'
           <p className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">{value}</p>
         </div>
         {icon ? (
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-container text-on-surface-variant">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-container text-on-surface-variant">
             <span className="material-symbols-outlined text-[20px]">{icon}</span>
           </div>
         ) : null}

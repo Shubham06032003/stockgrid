@@ -65,7 +65,7 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-editorial p-8">
+        <div className="bg-white rounded-2xl shadow-editorial p-6 sm:p-8">
           <h2 className="text-2xl font-bold text-on-surface mb-1">Welcome back</h2>
           <p className="text-sm text-on-surface-variant mb-8">Sign in to your inventory workspace</p>
 

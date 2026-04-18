@@ -40,7 +40,7 @@ export default function Register() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-editorial p-8">
+        <div className="bg-white rounded-2xl shadow-editorial p-6 sm:p-8">
           <h2 className="text-2xl font-bold text-on-surface mb-1">Create your workspace</h2>
           <p className="text-sm text-on-surface-variant mb-8">Set up your inventory management system</p>
 

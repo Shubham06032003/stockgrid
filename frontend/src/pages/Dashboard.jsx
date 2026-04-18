@@ -59,11 +59,13 @@ export default function Dashboard() {
   const { data: dashData, isLoading } = useQuery({
     queryKey: ['dashboard'],
     queryFn: () => reportsApi.dashboard().then((r) => r.data),
+    enabled: !!user,
   });
 
   const { data: alerts } = useQuery({
     queryKey: ['alerts'],
     queryFn: () => alertsApi.list({ resolved: 'false', limit: 5 }).then((r) => r.data.alerts),
+    enabled: !!user,
   });
 
   const insightsMutation = useMutation({

@@ -50,6 +50,7 @@ export default function AppLayout() {
     queryFn: () => alertsApi.list({ resolved: 'false', limit: 99 }),
     refetchInterval: 60000,
     select: d => d.data.alerts.length,
+    enabled: !!user,
   })
 
   const alertCount = alertsData || 0
